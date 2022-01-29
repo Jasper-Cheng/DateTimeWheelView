@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="@drawable/bg_1b6cff_half_shape"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_60_dp"
+        android:orientation="vertical"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dimens_30_dp"
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimens_12_dp"
+        android:paddingRight="@dimen/dimens_12_dp"
+        android:clipChildren="false"
+        android:layout_marginBottom="@dimen/dimens_20_dp">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/iv_switch_time"
+            android:text="12月"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/iv_switch_time"
+            android:layout_width="7dp"
+            android:layout_height="@dimen/dimens_6_dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_time_switch" />
+    </RelativeLayout>
+
+    <!--日历-->
+    <com.example.datetimewheelview.CustomView.DayView
+        android:layout_below="@+id/rl_title"
+        android:id="@+id/calender"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.datetimewheelview.CustomView.DayView>
+    <!--分割线-->
+    <RelativeLayout
+        android:layout_marginRight="@dimen/dimens_10_dp"
+        android:layout_marginLeft="@dimen/dimens_10_dp"
+        android:id="@+id/expand_collapse_rl"
+        android:layout_marginTop="@dimen/dimens_10_dp"
+        android:layout_below="@+id/calender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_20_dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:background="@color/color_e6e6ec"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_1_dp"/>
+        <ImageView
+            android:id="@+id/expand_collapse_image"
+            android:layout_centerInParent="true"
+            android:layout_width="18dp"
+            android:layout_height="@dimen/dimens_13_dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/study_calendar_collapse_arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

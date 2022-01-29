@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_ffffff_14_half_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/pop_titleBar"
+        android:layout_marginTop="@dimen/dimens_20_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginStart="@dimen/dimens_20_dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:textColor="@color/wheel_black"
+            android:text="@string/time_filter"
+            android:layout_width="@dimen/dimens_80_dp"
+            android:layout_height="@dimen/dimens_20_dp"/>
+        <ImageView
+            android:id="@+id/pop_titleBar_cancel"
+            android:layout_marginEnd="@dimen/dimens_20_dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/study_calendar_pop_cancel_icon"
+            android:layout_width="@dimen/dimens_13_dp"
+            android:layout_height="@dimen/dimens_13_dp"/>
+    </RelativeLayout>
+
+    <com.example.datetimewheelview.CustomView.DateTimeWheelView
+        android:id="@+id/data_picker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_210_dp"
+        android:layout_below="@+id/pop_titleBar"
+        android:layout_marginTop="@dimen/dimens_20_dp" />
+    
+    <TextView
+        android:layout_marginBottom="@dimen/dimens_10_dp"
+        android:layout_marginTop="@dimen/dimens_10_dp"
+        android:id="@+id/date_ensure"
+        android:textSize="@dimen/text_size_18"
+        android:background="@drawable/bg_1b6cff_22_shape"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/sure"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/data_picker"
+        android:layout_width="@dimen/dimens_165_dp"
+        android:layout_height="@dimen/dimens_45_dp"/>
+
+</RelativeLayout>

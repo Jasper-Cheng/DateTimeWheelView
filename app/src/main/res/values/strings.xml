@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DateTimeWheelView</string>
+    <string name="time_filter">时间筛选</string>
+    <string name="sure">确定</string>
+    <string name="calendar_start_time">开始时间</string>
+    <string name="calendar_end_time">结束时间</string>
+</resources>
